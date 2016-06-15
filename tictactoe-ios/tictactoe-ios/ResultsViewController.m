@@ -10,20 +10,35 @@
 
 @interface ResultsViewController ()
 
+@property(nonatomic, strong) NSString *temp;
+
 @end
 
 @implementation ResultsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     self.navigationItem.hidesBackButton = YES;
+    if ((delegate.isPlayer1Turn == YES) && (delegate.isDraw == NO)){
+        NSString *temp = [NSString stringWithFormat:@"%@ Won!", delegate.player1Name];
+        self.lblResult.text = [NSString stringWithString:temp];
+    }
+    if ((delegate.isPlayer1Turn == NO) && (delegate.isDraw == NO)){
+        NSString *temp = [NSString stringWithFormat:@"%@ Won!", delegate.player2Name];
+        self.lblResult.text = [NSString stringWithString:temp];
+    }
+    else if (delegate.isDraw == YES){
+        NSString *temp = [NSString stringWithFormat:@"It is a Draw :o"];
+        self.lblResult.text = [NSString stringWithString:temp];
+        
+    }
 }
 
-
-- (IBAction)restartWithSamePlayersCliked:(id)sender {
+- (IBAction)restartWithSamePlayersClicked:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)restartWithDifferentPlayersClicked:(id)sender {
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 @end

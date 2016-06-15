@@ -7,15 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface ResultsViewController : UIViewController
+@interface ResultsViewController : BaseViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *lblResult;
 
 @property (weak, nonatomic) IBOutlet UIButton *btnRestartWithSamePlayers;
 @property (weak, nonatomic) IBOutlet UIButton *btnRestartWithDiffrentPlayers;
 
-- (IBAction)restartWithSamePlayersCliked:(id)sender;
+- (IBAction)restartWithSamePlayersClicked:(id)sender;
 - (IBAction)restartWithDifferentPlayersClicked:(id)sender;
 
 

@@ -104,7 +104,6 @@
                                 </state>
                                 <connections>
                                     <action selector="resetBtnClicked:" destination="fDH-Q2-a00" eventType="touchUpInside" id="GEW-tW-vdu"/>
-                                    <segue destination="6fa-UG-axI" kind="push" id="tw9-TS-fO9"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" id="hsZ-eN-qtx">
@@ -201,7 +200,7 @@
                         <outlet property="btn8" destination="qzy-wL-ybs" id="wPf-xW-Wkx"/>
                         <outlet property="btn9" destination="yu8-Zj-OeT" id="vxC-rf-V2m"/>
                         <outlet property="btnReset" destination="Yny-bC-RRk" id="dB9-HO-JXF"/>
-                        <segue destination="6fa-UG-axI" kind="push" id="xeg-lU-MtS"/>
+                        <segue destination="6fa-UG-axI" kind="push" identifier="showResultsSegue" id="xeg-lU-MtS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cjB-Kk-bap" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -239,7 +238,7 @@
                                 <color key="backgroundColor" red="0.28686713469984071" green="1" blue="0.28243300854866227" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Restart With Same Players"/>
                                 <connections>
-                                    <action selector="restartWithSamePlayersCliked:" destination="6fa-UG-axI" eventType="touchUpInside" id="Tse-cg-Eon"/>
+                                    <action selector="restartWithSamePlayersClicked:" destination="6fa-UG-axI" eventType="touchUpInside" id="4zU-mk-RQd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -254,13 +253,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MCS-e3-peE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="956" y="412"/>
+            <point key="canvasLocation" x="1031" y="412"/>
         </scene>
     </scenes>
     <resources>
         <image name="G.png" width="640" height="955"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="xeg-lU-MtS"/>
-    </inferredMetricsTieBreakers>
 </document>

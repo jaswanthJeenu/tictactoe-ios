@@ -8,7 +8,11 @@
 
 #import "GameViewController.h"
 
+#import "GameViewController.h"
+
 @interface GameViewController ()
+@property BOOL isGameFinished;
+@property NSTimer *gameTimer;
 
 @end
 
@@ -16,165 +20,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     self.navigationItem.hidesBackButton = YES;
+    
 }
 
-- (void)viewWillAppear:(BOOL)animated{
-    
+-(void)viewWillAppear:(BOOL)animated{
     [self resetBtnClicked:nil];
-    
 }
 
-
-
-
-- (IBAction)gameButtonClicked:(id)sender {
-    
-    UIButton *clickedButton = (UIButton *) sender;
-    NSLog(@"is player1 turn : %@", (delegate.isPlayer1Turn) ? @"yes" : @"no");
-    if (clickedButton.tag == 1){
-        if ((delegate.isPlayer1Turn == YES)
-            && ([self.btn1.currentTitle isEqualToString:@""])){
-            [self.btn1 setTitle:@"X" forState:UIControlStateNormal];
-            [self.game addObject:[NSNumber numberWithInteger:1]];
-            delegate.isPlayer1Turn = !delegate.isPlayer1Turn;
-        }
-        else if ((delegate.isPlayer1Turn == NO)
-                 && ([self.btn1.currentTitle isEqualToString:@""])){
-            [self.btn1 setTitle:@"O" forState:UIControlStateNormal];
-            [self.game addObject:[NSNumber numberWithInteger:2]];
-            delegate.isPlayer1Turn = !delegate.isPlayer1Turn;
-        }
-    }
-    
-    if (clickedButton.tag == 2){
-        if ((delegate.isPlayer1Turn == YES)
-            && ([self.btn2.currentTitle isEqualToString:@""])){
-            [self.btn2 setTitle:@"X" forState:UIControlStateNormal];
-            [self.game addObject:[NSNumber numberWithInteger:1]];
-            delegate.isPlayer1Turn = !delegate.isPlayer1Turn;
-        }
-        else if ((delegate.isPlayer1Turn == NO)
-                 && ([self.btn2.currentTitle isEqualToString:@""])){
-            [self.btn2 setTitle:@"O" forState:UIControlStateNormal];
-            [self.game addObject:[NSNumber numberWithInteger:2]];
-            delegate.isPlayer1Turn = !delegate.isPlayer1Turn;
-        }
-    }
-    
-    if (clickedButton.tag == 3){
-        if ((delegate.isPlayer1Turn == YES)
-            && ([self.btn3.currentTitle isEqualToString:@""])){
-            [self.btn3 setTitle:@"X" forState:UIControlStateNormal];
-            [self.game addObject:[NSNumber numberWithInteger:1]];
-            delegate.isPlayer1Turn = !delegate.isPlayer1Turn;
-        }
-        else if ((delegate.isPlayer1Turn == NO)
-                 && ([self.btn3.currentTitle isEqualToString:@""])){
-            [self.btn3 setTitle:@"O" forState:UIControlStateNormal];
-            [self.game addObject:[NSNumber numberWithInteger:2]];
-            delegate.isPlayer1Turn = !delegate.isPlayer1Turn;
-        }
-    }
-    
-    if (clickedButton.tag == 4){
-        if ((delegate.isPlayer1Turn == YES)
-            && ([self.btn4.currentTitle isEqualToString:@""])){
-            [self.btn4 setTitle:@"X" forState:UIControlStateNormal];
-            [self.game addObject:[NSNumber numberWithInteger:1]];
-            delegate.isPlayer1Turn = !delegate.isPlayer1Turn;
-        }
-        else if ((delegate.isPlayer1Turn == NO)
-                 && ([self.btn4.currentTitle isEqualToString:@""])){
-            [self.btn4 setTitle:@"O" forState:UIControlStateNormal];
-            [self.game addObject:[NSNumber numberWithInteger:2]];
-            delegate.isPlayer1Turn = !delegate.isPlayer1Turn;
-        }
-    }
-    
-    if (clickedButton.tag == 5){
-        if ((delegate.isPlayer1Turn == YES)
-            && ([self.btn5.currentTitle isEqualToString:@""])){
-            [self.btn5 setTitle:@"X" forState:UIControlStateNormal];
-            [self.game addObject:[NSNumber numberWithInteger:1]];
-            delegate.isPlayer1Turn = !delegate.isPlayer1Turn;
-        }
-        else if ((delegate.isPlayer1Turn == NO)
-                 && ([self.btn5.currentTitle isEqualToString:@""])){
-            [self.btn5 setTitle:@"O" forState:UIControlStateNormal];
-            [self.game addObject:[NSNumber numberWithInteger:2]];
-            delegate.isPlayer1Turn = !delegate.isPlayer1Turn;
-        }
-    }
-
-    if (clickedButton.tag == 6){
-        if ((delegate.isPlayer1Turn == YES)
-            && ([self.btn6.currentTitle isEqualToString:@""])){
-            [self.btn6 setTitle:@"X" forState:UIControlStateNormal];
-            [self.game addObject:[NSNumber numberWithInteger:1]];
-            delegate.isPlayer1Turn = !delegate.isPlayer1Turn;
-        }
-        else if ((delegate.isPlayer1Turn == NO)
-                 && ([self.btn6.currentTitle isEqualToString:@""])){
-            [self.btn6 setTitle:@"O" forState:UIControlStateNormal];
-            [self.game addObject:[NSNumber numberWithInteger:2]];
-            delegate.isPlayer1Turn = !delegate.isPlayer1Turn;
-        }
-    }
-    
-    if (clickedButton.tag == 7){
-        if ((delegate.isPlayer1Turn == YES)
-            && ([self.btn7.currentTitle isEqualToString:@""])){
-            [self.btn7 setTitle:@"X" forState:UIControlStateNormal];
-            [self.game addObject:[NSNumber numberWithInteger:1]];
-            delegate.isPlayer1Turn = !delegate.isPlayer1Turn;
-        }
-        else if ((delegate.isPlayer1Turn == NO)
-                 && ([self.btn7.currentTitle isEqualToString:@""])){
-            [self.btn7 setTitle:@"O" forState:UIControlStateNormal];
-            [self.game addObject:[NSNumber numberWithInteger:2]];
-            delegate.isPlayer1Turn = !delegate.isPlayer1Turn;
-        }
-    }
-    
-    if (clickedButton.tag == 8){
-        if ((delegate.isPlayer1Turn == YES)
-            && ([self.btn8.currentTitle isEqualToString:@""])){
-            [self.btn8 setTitle:@"X" forState:UIControlStateNormal];
-            [self.game addObject:[NSNumber numberWithInteger:1]];
-            delegate.isPlayer1Turn = !delegate.isPlayer1Turn;
-        }
-        else if ((delegate.isPlayer1Turn == NO)
-                 && ([self.btn8.currentTitle isEqualToString:@""])){
-            [self.btn8 setTitle:@"O" forState:UIControlStateNormal];
-            [self.game addObject:[NSNumber numberWithInteger:2]];
-            delegate.isPlayer1Turn = !delegate.isPlayer1Turn;
-        }
-    }
-    
-    if (clickedButton.tag == 9){
-        if ((delegate.isPlayer1Turn == YES)
-            && ([self.btn9.currentTitle isEqualToString:@""])){
-            [self.btn9 setTitle:@"X" forState:UIControlStateNormal];
-            [self.game addObject:[NSNumber numberWithInteger:1]];
-            delegate.isPlayer1Turn = !delegate.isPlayer1Turn;
-        }
-        else if ((delegate.isPlayer1Turn == NO)
-                 && ([self.btn9.currentTitle isEqualToString:@""])){
-            [self.btn9 setTitle:@"O" forState:UIControlStateNormal];
-            [self.game addObject:[NSNumber numberWithInteger:2]];
-            delegate.isPlayer1Turn = !delegate.isPlayer1Turn;
-        }
-    }
-    NSLog(@" and is player1 turn : %@", (delegate.isPlayer1Turn) ? @"yes" : @"no");
-
-
-}
 
 - (IBAction)resetBtnClicked:(id)sender {
-    
-    delegate.isPlayer1Turn = YES;
     
     [self.btn1 setTitle:@"" forState:UIControlStateNormal];
     [self.btn2 setTitle:@"" forState:UIControlStateNormal];
@@ -186,10 +41,156 @@
     [self.btn8 setTitle:@"" forState:UIControlStateNormal];
     [self.btn9 setTitle:@"" forState:UIControlStateNormal];
     
-    int i;
-    for (i = 1;i < 10;i++){
-        [self.game addObject:[NSNumber numberWithInteger:0]];
+    delegate.isPlayer1Turn = YES;
+    
+}
+
+- (IBAction)gameButtonClicked:(id)sender {
+    UIButton *clickedButton = sender;
+    
+    if ([clickedButton.currentTitle isEqualToString:@""]){
+        if (delegate.isPlayer1Turn){
+            [clickedButton setTitle:@"X" forState:UIControlStateNormal];
+        }
+        else{
+            [clickedButton setTitle:@"O" forState:UIControlStateNormal];
+        }
+        delegate.isPlayer1Turn = !delegate.isPlayer1Turn;
+        [self checkIfGameFinished];
+    }
+}
+
+
+
+- (IBAction)backClicked:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
+-(void) checkIfGameFinished{
+    
+    self.isGameFinished = NO;
+    
+    if (([self.btn1.currentTitle isEqualToString:self.btn2.currentTitle])
+        && ([self.btn2.currentTitle isEqualToString:self.btn3.currentTitle])){
+        if ([self.btn1.currentTitle isEqualToString:@"X"]){
+            self.isGameFinished=YES;
+        } else if ([self.btn1.currentTitle isEqualToString:@"O"]){
+            self.isGameFinished=YES;
+        }
+        
+    }
+    else if (([self.btn4.currentTitle isEqualToString:self.btn5.currentTitle])
+             && ([self.btn5.currentTitle isEqualToString:self.btn6.currentTitle])){
+        if ([self.btn4.currentTitle isEqualToString:@"X"]){
+            self.isGameFinished=YES;
+        } else if ([self.btn4.currentTitle isEqualToString:@"O"]){
+            self.isGameFinished=YES;
+        }
+        
+    }
+    else if (([self.btn7.currentTitle isEqualToString:self.btn8.currentTitle])
+             && ([self.btn8.currentTitle isEqualToString:self.btn9.currentTitle])){
+        if ([self.btn7.currentTitle isEqualToString:@"X"]){
+            
+            self.isGameFinished=YES;
+            
+        }
+        else if ([self.btn7.currentTitle isEqualToString:@"O"]){
+            
+            self.isGameFinished=YES;
+            
+        }
+        
+    }
+    else if (([self.btn1.currentTitle isEqualToString:self.btn4.currentTitle])
+             && ([self.btn4.currentTitle isEqualToString:self.btn7.currentTitle])){
+        if ([self.btn1.currentTitle isEqualToString:@"X"]){
+            
+            self.isGameFinished=YES;
+            
+        }
+        else if ([self.btn1.currentTitle isEqualToString:@"O"]){
+            
+            self.isGameFinished=YES;
+            
+        }
+        
+    }
+    else if (([self.btn2.currentTitle isEqualToString:self.btn5.currentTitle])
+             && ([self.btn5.currentTitle isEqualToString:self.btn8.currentTitle])){
+        if ([self.btn2.currentTitle isEqualToString:@"X"]){
+            
+            self.isGameFinished=YES;
+            
+        }
+        else if ([self.btn2.currentTitle isEqualToString:@"O"]){
+            
+            self.isGameFinished=YES;
+            
+        }
+        
+    }
+    else if (([self.btn3.currentTitle isEqualToString:self.btn6.currentTitle])
+             && ([self.btn6.currentTitle isEqualToString:self.btn9.currentTitle])){
+        if ([self.btn3.currentTitle isEqualToString:@"X"]){
+            
+            self.isGameFinished=YES;
+            
+        }
+        else if ([self.btn3.currentTitle isEqualToString:@"O"]){
+            
+            self.isGameFinished=YES;
+            
+        }
+        
+    }
+    else if (([self.btn1.currentTitle isEqualToString:self.btn5.currentTitle])
+             && ([self.btn5.currentTitle isEqualToString:self.btn9.currentTitle])){
+        if ([self.btn1.currentTitle isEqualToString:@"X"]){
+            
+            self.isGameFinished=YES;
+            
+        }
+        else if ([self.btn1.currentTitle isEqualToString:@"O"]){
+            
+            self.isGameFinished=YES;
+            
+        }
+        
+    }
+    else if (([self.btn3.currentTitle isEqualToString:self.btn5.currentTitle])
+             && ([self.btn5.currentTitle isEqualToString:self.btn7.currentTitle])){
+        if ([self.btn3.currentTitle isEqualToString:@"X"]){
+            
+            self.isGameFinished=YES;
+            
+        }
+        else if ([self.btn3.currentTitle isEqualToString:@"O"]){
+            
+            self.isGameFinished=YES;
+            
+        }
+        
+    }
+    else if ((!([self.btn1.currentTitle isEqualToString:@""]))
+             && (!([self.btn2.currentTitle isEqualToString:@""]))
+             && (!([self.btn3.currentTitle isEqualToString:@""]))
+             && (!([self.btn4.currentTitle isEqualToString:@""]))
+             && (!([self.btn5.currentTitle isEqualToString:@""]))
+             && (!([self.btn6.currentTitle isEqualToString:@""]))
+             && (!([self.btn7.currentTitle isEqualToString:@""]))
+             && (!([self.btn8.currentTitle isEqualToString:@""]))
+             && (!([self.btn9.currentTitle isEqualToString:@""]))){
+        
+        self.isGameFinished=YES;
+        delegate.isDraw=YES;
     }
     
+    
+    // write logic to check if game is finished
+    if(self.isGameFinished) {
+        [self performSegueWithIdentifier:@"showResultsSegue" sender:self];
+    }
 }
 @end

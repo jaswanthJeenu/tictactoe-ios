@@ -19,6 +19,7 @@
 		F266A5D11CF5B3A300FDFDEB /* navigation-bar@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F266A5D01CF5B3A300FDFDEB /* navigation-bar@2x.jpg */; };
 		F266A5D41CF5B88700FDFDEB /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F266A5D31CF5B88700FDFDEB /* GameViewController.m */; };
 		F266A5D71CF5B89800FDFDEB /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F266A5D61CF5B89800FDFDEB /* ResultsViewController.m */; };
+		F2FADAD11D0E9D3D000BF63D /* Tic-Tac-Toe-web-45.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2FADAD01D0E9D3D000BF63D /* Tic-Tac-Toe-web-45.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		F266A5D31CF5B88700FDFDEB /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		F266A5D51CF5B89800FDFDEB /* ResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsViewController.h; sourceTree = "<group>"; };
 		F266A5D61CF5B89800FDFDEB /* ResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsViewController.m; sourceTree = "<group>"; };
+		F2FADAD01D0E9D3D000BF63D /* Tic-Tac-Toe-web-45.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Tic-Tac-Toe-web-45.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 		F266A5AD1CF5A5B100FDFDEB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F2FADAD01D0E9D3D000BF63D /* Tic-Tac-Toe-web-45.jpg */,
 				F266A5AE1CF5A5B100FDFDEB /* main.m */,
 				F266A5CB1CF5AF0F00FDFDEB /* G.png */,
 				F266A5C91CF5A89A00FDFDEB /* tic_tac_toe_logo.jpg */,
@@ -161,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F266A5D11CF5B3A300FDFDEB /* navigation-bar@2x.jpg in Resources */,
+				F2FADAD11D0E9D3D000BF63D /* Tic-Tac-Toe-web-45.jpg in Resources */,
 				F266A5CC1CF5AF0F00FDFDEB /* G.png in Resources */,
 				F266A5BD1CF5A5B100FDFDEB /* LaunchScreen.storyboard in Resources */,
 				F266A5CA1CF5A89A00FDFDEB /* tic_tac_toe_logo.jpg in Resources */,
@@ -330,6 +334,7 @@
 				F266A5C31CF5A5B100FDFDEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

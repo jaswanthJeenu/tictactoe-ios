@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tic_tac_toe_logo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="kxE-bI-DVr">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tic-Tac-Toe-web-45.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="kxE-bI-DVr">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             </imageView>
                         </subviews>
@@ -33,10 +33,10 @@
                                 <exclude reference="kxE-bI-DVr"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="G5c-AL-Ub3"/>
                                 <exclude reference="J0q-4s-S60"/>
                                 <exclude reference="Jta-1a-RNl"/>
                                 <exclude reference="SqX-jy-Zrf"/>
-                                <exclude reference="G5c-AL-Ub3"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -44,10 +44,10 @@
                                 <include reference="kxE-bI-DVr"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="G5c-AL-Ub3"/>
                                 <include reference="J0q-4s-S60"/>
                                 <include reference="Jta-1a-RNl"/>
                                 <include reference="SqX-jy-Zrf"/>
-                                <include reference="G5c-AL-Ub3"/>
                             </mask>
                         </variation>
                     </view>
@@ -58,6 +58,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="tic_tac_toe_logo.jpg" width="300" height="300"/>
+        <image name="Tic-Tac-Toe-web-45.jpg" width="1017" height="943"/>
     </resources>
 </document>

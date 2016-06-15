@@ -12,11 +12,11 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) NSString *player1Name;
-@property (strong, nonatomic) NSString *player2Name;
-
+@property(nonatomic, strong) NSString *player1Name;
+@property(nonatomic, strong) NSString *player2Name;
 @property BOOL isPlayer1Turn;
-
+@property BOOL isDraw;
 
 @end
+
 
